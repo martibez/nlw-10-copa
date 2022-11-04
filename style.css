@@ -112,6 +112,7 @@ header {
 
 .card ul li p {
     font-size: 18px;
+    text-transform: capitalize;
 }
 
 .card h2:hover,
