@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
-}
-
 :root {
   --card-title-border-color: #746615;
   --card-color-primary: #f7dd43;
@@ -15,11 +11,8 @@ ul {
   --bg: url(./assets/bg-default.svg);
 }
 
-body.green {
-  --card-title-border-color: #047c3f;
-  --card-color-primary: #047c3f;
-  --card-bg-color: #1a1f1b;
-  --bg: url(./assets/bg-green.svg);
+ul {
+  list-style: none;
 }
 
 body {
@@ -30,33 +23,49 @@ body {
   background-size: cover;
 }
 
+body.green {
+  --card-title-border-color: #047c3f;
+  --card-color-primary: #047c3f;
+  --card-bg-color: #1a1f1b;
+  --bg: url(./assets/bg-green.svg);
+}
+
 body * {
   font-family: "Qatar2022", sans-serif;
 }
 
 header {
-  margin-bottom: 0 auto;
+  margin-bottom: 63px;
   text-align: center;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  width: 30%;
+  margin: auto;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 #app {
   width: fit-content;
-  margin: 52px auto;
+  margin: auto;
   padding-top: 52px;
 }
 
 #cards {
   display: flex;
+  flex-direction: column;
   gap: 32px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
 }
+
+@media (min-width: 1024px) {
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    flex-direction: row;
+    align-items: flex-start;
+
+    max-width: fit-content;
+  } }
 
 .card {
   padding: 32px 23px;
@@ -64,7 +73,7 @@ header {
   background: var(--card-bg-color);
   border-bottom: 2px solid var(--card-color-primary);
   border-radius: 6px;
-  height: fit-content;
+  /* height: fit-content; */
 }
 
 .card h2 {
@@ -91,15 +100,16 @@ header {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 350px;
+  width: 270px; /*ajusta a largura do card*/
 }
 
 .card ul li {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  font-weight: 900;
+
+  flex-direction: column;
+  /* font-weight: 900; */
   font-size: 36px;
   color: #e1e1e6;
 }
@@ -146,7 +156,4 @@ header {
   100% {
     opacity: 1;
   }
-}
-
-@media (min-width: 400px) {
 }
