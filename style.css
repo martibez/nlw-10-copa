@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --card-title-border-color: #746615;
+  --card-color-primary: #F7DD43;
+  --card-bg-color: #1D1C19;
+  --bg: url(./assets/bg-default.svg);
+}
+
+body.green {
+  --card-title-border-color: #047C3F;
+  --card-color-primary: #047C3F;
+  --card-bg-color: #1a1f1b;
+  --bg: url(./assets/bg-green.svg);
+}
+
+body {
+  background-color: #121214;
+  background-image: var(--bg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+body * {
+  font-family: 'Qatar2022', sans-serif;
+}
+
+header {
+  margin-bottom: 0 auto;
+  text-align: center;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#app {
+  width: fit-content;
+  margin: 52px auto;
+  padding-top: 52px;
+}
+
+#cards {
+  display: flex;
+  gap: 32px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  padding: 32px 23px; 
+  text-align: center;
+  background: var(--card-bg-color);
+  border-bottom: 2px solid var(--card-color-primary);
+  border-radius: 6px;
+  height: fit-content;
+}
+
+.card h2 {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid var(--card-title-border-color);
+  border-radius: 6px;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 53px;
+  color: #F7DD43;
+}
+
+.card h2 span {
+  color: #E1E1E6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 350px;
+}
+
+.card ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 900;
+  font-size: 36px;
+  color: #E1E1E6;
+}
+
+.card ul li + li {
+  padding-top: 24px;
+  margin-top: 12px;
+  border-top: 1px solid #323238;
+}
+
+.card ul li p {
+    font-size: 18px;
+}
+
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li img:hover {
+  transform: scale(1.1);
+}
+
+.card h2,
+.card ul li strong,
+.card ul li img {
+  transition: transform .2s;
+} 
+
+.horario {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.card {
+  animation: appear .2s;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 400px) {
+
+}
