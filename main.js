@@ -4,12 +4,12 @@ function createGame(group, player1, hour, player2) {
       <p>Grupo ${group}</p>
       <div class="horario">
         <div style="width: 90px; height: 80px;">
-          <img src="assets/icon-${player1}.svg" alt="Bandeira do ${player1}" />
+          <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" />
           <p>${player1}</p>
         </div>
         <strong>${hour}</strong>
         <div style="width: 90px; height: 80px;">
-          <img src="assets/icon-${player2}.svg" alt="Bandeira do ${player2}" />
+          <img src="./assets/icon-${player2}.svg" alt="Bandeira do ${player2}" />
           <p>${player2}</p>
         </div>
       </div>
@@ -17,7 +17,7 @@ function createGame(group, player1, hour, player2) {
   `
 }
 
-let delay = 0;
+let delay = 0
 function createCard(date, day, games) {
   return `
     <div class="card" >
@@ -136,5 +136,3 @@ document.querySelector("#app").innerHTML = `
       )}  
     </main>
 `
-
-

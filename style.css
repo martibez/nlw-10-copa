@@ -10,14 +10,14 @@ ul {
 
 :root {
   --card-title-border-color: #746615;
-  --card-color-primary: #F7DD43;
-  --card-bg-color: #1D1C19;
+  --card-color-primary: #f7dd43;
+  --card-bg-color: #1d1c19;
   --bg: url(./assets/bg-default.svg);
 }
 
 body.green {
-  --card-title-border-color: #047C3F;
-  --card-color-primary: #047C3F;
+  --card-title-border-color: #047c3f;
+  --card-color-primary: #047c3f;
   --card-bg-color: #1a1f1b;
   --bg: url(./assets/bg-green.svg);
 }
@@ -28,10 +28,10 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-} 
+}
 
 body * {
-  font-family: 'Qatar2022', sans-serif;
+  font-family: "Qatar2022", sans-serif;
 }
 
 header {
@@ -59,7 +59,7 @@ header {
 }
 
 .card {
-  padding: 32px 23px; 
+  padding: 32px 23px;
   text-align: center;
   background: var(--card-bg-color);
   border-bottom: 2px solid var(--card-color-primary);
@@ -78,11 +78,11 @@ header {
   width: fit-content;
   margin-inline: auto;
   margin-bottom: 53px;
-  color: #F7DD43;
+  color: #f7dd43;
 }
 
 .card h2 span {
-  color: #E1E1E6;
+  color: #e1e1e6;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -101,7 +101,7 @@ header {
   justify-content: space-between;
   font-weight: 900;
   font-size: 36px;
-  color: #E1E1E6;
+  color: #e1e1e6;
 }
 
 .card ul li + li {
@@ -111,8 +111,8 @@ header {
 }
 
 .card ul li p {
-    font-size: 18px;
-    text-transform: capitalize;
+  font-size: 18px;
+  text-transform: capitalize;
 }
 
 .card h2:hover,
@@ -124,8 +124,8 @@ header {
 .card h2,
 .card ul li strong,
 .card ul li img {
-  transition: transform .2s;
-} 
+  transition: transform 0.2s;
+}
 
 .horario {
   display: flex;
@@ -135,7 +135,7 @@ header {
 }
 
 .card {
-  animation: appear .2s;
+  animation: appear 0.2s;
 }
 
 @keyframes appear {
@@ -149,5 +149,4 @@ header {
 }
 
 @media (min-width: 400px) {
-
 }
