@@ -11,7 +11,7 @@ function createGame(group, player1, hour, player2) {
           <p>${player1}</p>
         </div>
         <form id="scr1">
-          <select id="score" name="number">
+          <select id="score" name="number" onchange="salvaPlacar(${idGame})">
             <option ${
               !!placarInicial && placarInicial.golsT1 == 0 ? "selected" : ""
             } value="0">0</option>
@@ -49,7 +49,7 @@ function createGame(group, player1, hour, player2) {
         </form>
         <strong>${hour}</strong>
         <form id="scr2">
-          <select value=5 id="score" name="number">
+          <select value=5 id="score" name="number" onchange="salvaPlacar(${idGame})">
             <option ${
               !!placarInicial && placarInicial.golsT2 == 0 ? "selected" : ""
             } value="0">0</option>
@@ -89,9 +89,6 @@ function createGame(group, player1, hour, player2) {
           <img src="./assets/icon-${player2}.svg" alt="Bandeira do ${player2}" />
           <p>${player2}</p>
         </div>
-      </div>
-      <div>
-        <input type="button" id="send" value="Salvar placar" onclick="salvaPlacar(${idGame++})">
       </div>
     </li>
   `
