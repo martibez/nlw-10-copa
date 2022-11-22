@@ -57,18 +57,17 @@ header {
 }
 
 @media (min-width: 1024px) {
-#cards {
+  #cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
     flex-direction: row;
     align-items: flex-start;
-
     max-width: fit-content;
-  } }
+  }
+}
 
 .card {
-  padding: 32px 23px;
+  padding: 32px 10px;
   text-align: center;
   background: var(--card-bg-color);
   border-bottom: 2px solid var(--card-color-primary);
@@ -100,14 +99,13 @@ header {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 270px; /*ajusta a largura do card*/
+  width: auto; /*ajusta a largura do card*/
 }
 
 .card ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   flex-direction: column;
   /* font-weight: 900; */
   font-size: 36px;
@@ -125,16 +123,24 @@ header {
   text-transform: capitalize;
 }
 
-.card h2:hover,
-.card ul li strong:hover,
 .card ul li img:hover {
   transform: scale(1.1);
+}
+
+.card ul li strong{
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .card h2,
 .card ul li strong,
 .card ul li img {
   transition: transform 0.2s;
+}
+
+.card form {
+  text-align: center;
+  font-size: large;
 }
 
 .horario {

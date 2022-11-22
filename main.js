@@ -1,4 +1,7 @@
+var idGame = 1;
+
 function createGame(group, player1, hour, player2) {
+  var placarInicial = JSON.parse(localStorage.getItem(idGame))
   return `
     <li>
       <p>Grupo ${group}</p>
@@ -7,11 +10,88 @@ function createGame(group, player1, hour, player2) {
           <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" />
           <p>${player1}</p>
         </div>
+        <form id="scr1">
+          <select id="score" name="number">
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 0 ? "selected" : ""
+            } value="0">0</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 1 ? "selected" : ""
+            } value="1">1</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 2 ? "selected" : ""
+            } value="2">2</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 3 ? "selected" : ""
+            } value="3">3</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 4 ? "selected" : ""
+            } value="4">4</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 5 ? "selected" : ""
+            } value="5">5</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 6 ? "selected" : ""
+            } value="6">6</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 7 ? "selected" : ""
+            } value="7">7</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 8 ? "selected" : ""
+            } value="8">8</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 9 ? "selected" : ""
+            } value="9">9</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT1 == 10 ? "selected" : ""
+            } value="10">10</option>
+          </select>
+        </form>
         <strong>${hour}</strong>
+        <form id="scr2">
+          <select value=5 id="score" name="number">
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 0 ? "selected" : ""
+            } value="0">0</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 1 ? "selected" : ""
+            } value="1">1</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 2 ? "selected" : ""
+            } value="2">2</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 3 ? "selected" : ""
+            } value="3">3</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 4 ? "selected" : ""
+            } value="4">4</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 5 ? "selected" : ""
+            } value="5">5</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 6 ? "selected" : ""
+            } value="6">6</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 7 ? "selected" : ""
+            } value="7">7</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 8 ? "selected" : ""
+            } value="8">8</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 9 ? "selected" : ""
+            } value="9">9</option>
+            <option ${
+              !!placarInicial && placarInicial.golsT2 == 10 ? "selected" : ""
+            } value="10">10</option>
+          </select>
+        </form>
         <div style="width: 90px; height: 80px;">
           <img src="./assets/icon-${player2}.svg" alt="Bandeira do ${player2}" />
           <p>${player2}</p>
         </div>
+      </div>
+      <div>
+        <input type="button" id="send" value="Salvar placar" onclick="salvaPlacar(${idGame++})">
       </div>
     </li>
   `
@@ -44,7 +124,7 @@ document.querySelector("#app").innerHTML = `
         "segunda-feira",
         createGame("B", "inglaterra", "10:00", "irã") +
           createGame("A", "senegal", "13:00", "holanda") +
-          createGame("B", "estados unidos", "13:00", "gales")
+          createGame("B", "estados unidos", "16:00", "gales")
       )}
       ${createCard(
         "22/11",
