@@ -2,6 +2,7 @@ var idGame = 1;
 
 function createGame(group, player1, hour, player2) {
   var placarInicial = JSON.parse(localStorage.getItem(idGame))
+  console.log(placarInicial)
   return `
     <li>
       <p>Grupo ${group}</p>
@@ -49,7 +50,7 @@ function createGame(group, player1, hour, player2) {
         </form>
         <strong>${hour}</strong>
         <form id="scr2">
-          <select value=5 id="score" name="number" onchange="salvaPlacar(${idGame})">
+          <select value=5 id="score" name="number" onchange="salvaPlacar(${idGame++})">
             <option ${
               !!placarInicial && placarInicial.golsT2 == 0 ? "selected" : ""
             } value="0">0</option>
