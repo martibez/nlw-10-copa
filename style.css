@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 :root {
   --card-title-border-color: #746615;
@@ -12,7 +12,7 @@
 }
 
 ul {
-  list-style: none;
+  /* list-style: none; */
 }
 
 body {
@@ -39,40 +39,42 @@ header {
   text-align: center;
   width: 30%;
   margin: auto;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
 #app {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   width: fit-content;
   margin: auto;
   padding-top: 52px;
 }
 
 #cards {
-  display: flex;
-  flex-direction: column;
   gap: 32px;
-}
-
-@media (min-width: 1024px) {
-  #cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    flex-direction: row;
-    align-items: flex-start;
-    max-width: fit-content;
-  }
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .card {
+  display: flex;
   padding: 32px 10px;
+  height: fit-content;
+  width: auto;
   text-align: center;
   background: var(--card-bg-color);
   border-bottom: 2px solid var(--card-color-primary);
   border-radius: 6px;
-  /* height: fit-content; */
+}
+
+.unique-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card h2 {
@@ -83,9 +85,7 @@ header {
   padding: 8px 16px;
   border: 1px solid var(--card-title-border-color);
   border-radius: 6px;
-  width: fit-content;
   margin-inline: auto;
-  margin-bottom: 53px;
   color: #f7dd43;
 }
 
@@ -100,6 +100,7 @@ header {
   flex-direction: column;
   gap: 24px;
   width: auto; /*ajusta a largura do card*/
+  padding: 0;
 }
 
 .card ul li {
@@ -107,7 +108,6 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  /* font-weight: 900; */
   font-size: 36px;
   color: #e1e1e6;
 }
@@ -127,7 +127,7 @@ header {
   transform: scale(1.1);
 }
 
-.card ul li strong{
+.card ul li strong {
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -148,10 +148,20 @@ header {
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  column-gap: 8px;
 }
 
 .card {
   animation: appear 0.2s;
+}
+
+.time-placar{
+  display: flex;
+  width: 90px;
+  height: 80px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 @keyframes appear {

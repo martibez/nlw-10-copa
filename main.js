@@ -7,7 +7,7 @@ function createGame(group, player1, hour, player2) {
     <li>
       <p>Grupo ${group}</p>
       <div class="horario">
-        <div style="width: 90px; height: 80px;">
+        <div class="time-placar">
           <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" />
           <p>${player1}</p>
         </div>
@@ -86,7 +86,7 @@ function createGame(group, player1, hour, player2) {
             } value="10">10</option>
           </select>
         </form>
-        <div style="width: 90px; height: 80px;">
+        <div class="time-placar">
           <img src="./assets/icon-${player2}.svg" alt="Bandeira do ${player2}" />
           <p>${player2}</p>
         </div>
@@ -99,10 +99,10 @@ let delay = 0
 function createCard(date, day, games) {
   return `
     <div class="card" >
-        <h2>${date} <span>${day}</span></h2>
-        <ul>
-          ${games}
-        </ul>
+        <div class="unique-card">
+          <h2>${date} <span>${day}</span></h2>
+          <ul>${games}</ul>
+        </div>
       </div>
   `
 }
