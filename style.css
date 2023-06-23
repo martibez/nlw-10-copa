@@ -1,18 +1,8 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
 :root {
   --card-title-border-color: #746615;
   --card-color-primary: #f7dd43;
   --card-bg-color: #1d1c19;
   --bg: url(./assets/bg-default.svg);
-}
-
-ul {
-  /* list-style: none; */
 }
 
 body {
@@ -35,10 +25,11 @@ body * {
 }
 
 header {
-  margin-bottom: 63px;
   text-align: center;
   width: 30%;
   margin: auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 #app {
@@ -46,9 +37,6 @@ header {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  width: fit-content;
-  margin: auto;
-  padding-top: 52px;
 }
 
 #cards {
@@ -121,6 +109,7 @@ header {
 .card ul li p {
   font-size: 18px;
   text-transform: capitalize;
+  margin: 0;
 }
 
 .card ul li img:hover {
@@ -159,6 +148,7 @@ header {
   display: flex;
   width: 90px;
   height: 80px;
+  row-gap: 16px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
